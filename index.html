@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Miel de Sabitiou 🍯</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffaf0;
+      color: #3b250b;
+      line-height: 1.6;
+    }
+
+    /* MENU */
+    header {
+      background: #f4b400;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #3b250b;
+      text-decoration: none;
+      margin-left: 22px;
+      font-weight: bold;
+    }
+
+    /* ACCUEIL */
+    .hero {
+      min-height: 560px;
+      padding: 70px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 45px;
+    }
+
+    .hero-text {
+      max-width: 560px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d88900;
+      color: white;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hero img {
+      width: min(440px, 100%);
+      height: 350px;
+      object-fit: cover;
+      border-radius: 25px;
+      box-shadow: 0 12px 30px #0003;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 65px 7%;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    /* PRODUITS */
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      width: 290px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px #0002;
+      padding-bottom: 22px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 18px 10px 5px;
+      font-size: 21px;
+    }
+
+    .price {
+      color: #d88900;
+      font-size: 21px;
+      font-weight: bold;
+      margin: 8px 0 5px;
+    }
+
+    .description {
+      font-size: 15px;
+      color: #66513a;
+      margin: 0 15px 18px;
+    }
+
+    /* GALERIE */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 5px 18px #0002;
+      transition: transform 0.25s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    /* À PROPOS */
+    .about {
+      text-align: center;
+      background: #fff2cf;
+    }
+
+    .about p {
+      max-width: 760px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: #3b250b;
+      color: white;
+      text-align: center;
+    }
+
+    .contact .whatsapp {
+      background: #25d366;
+      margin-top: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #241505;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* TELEPHONE */
+    @media (max-width: 700px) {
+
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 45px;
+      }
+
+      .hero img {
+        height: 280px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gallery img {
+        height: 190px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- MENU -->
+  <header>
+
+    <div class="logo">
+      🍯 Miel de Sabitiou
+    </div>
+
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#produits">Produits</a>
+      <a href="#galerie">Photos</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </header>
+
+
+  <!-- ACCUEIL -->
+  <section class="hero" id="accueil">
+
+    <div class="hero-text">
+
+      <h1>
+        Le goût authentique du miel 🍯
+      </h1>
+
+      <p>
+        Découvrez le miel de Sabitiou,
+        une douceur naturelle à savourer au quotidien.
+      </p>
+
+      <a class="btn" href="#produits">
+        Découvrir nos produits
+      </a>
+
+    </div>
+
+    <img
+      src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=900&q=80"
+      alt="Pot de miel">
+
+  </section>
+
+
+  <!-- PRODUITS -->
+  <section id="produits">
+
+    <h2 class="title">
+      🍯 Nos produits
+    </h2>
+
+    <div class="cards">
+
+
+      <!-- PRODUIT 1 -->
+      <article class="card">
+
+        <img
+          src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=700&q=80"
+          alt="Miel naturel">
+
+        <h3>
+          Miel naturel
+        </h3>
+
+        <div class="price">
+          À partir de 200 FCFA
+        </div>
+
+        <p class="description">
+          Disponible en vente au détail et en gros.
+        </p>
+
+        <a
+          class="btn"
+          target="_blank"
+          href="https://wa.me/22962634417?text=Bonjour%20Miel%20de%20Sabitiou%2C%20je%20voudrais%20conna%C3%AEtre%20les%20prix%20du%20miel%20et%20les%20quantit%C3%A9s%20disponibles.">
+          Commander
+        </a>
+
+      </article>
+
+
+      <!-- PRODUIT 2 -->
+      <article class="card">
+
+        <img
+          src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=700&q=80"
+          alt="Miel en pot">
+
+        <h3>
+          Miel en pot
+        </h3>
+
+        <div class="price">
+          À partir de 200 FCFA
+        </div>
+
+        <p class="description">
+          Plusieurs quantités disponibles selon vos besoins.
+        </p>
+
+        <a
+          class="btn"
+          target="_blank"
+          href="https://wa.me/22962634417?text=Bonjour%20Miel%20de%20Sabitiou%2C%20je%20voudrais%20conna%C3%AEtre%20les%20prix%20du%20miel%20en%20pot.">
+          Commander
+        </a>
+
+      </article>
+
+
+      <!-- GROS -->
+      <article class="card">
+
+        <img
+          src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=700&q=80"
+          alt="Vente de miel en gros">
+
+        <h3>
+          Vente en gros
+        </h3>
+
+        <div class="price">
+          Prix selon quantité
+        </div>
+
+        <p class="description">
+          Contactez-nous pour vos commandes en grande quantité.
+        </p>
+
+        <a
+          class="btn"
+          target="_blank"
+          href="https://wa.me/22962634417?text=Bonjour%20Miel%20de%20Sabitiou%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20une%20commande%20en%20gros.">
+          Commander
+        </a>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- GALERIE -->
+  <section id="galerie">
+
+    <h2 class="title">
+      📸 Découvrez notre miel
+    </h2>
+
+    <div class="gallery">
+
+      <img
+        src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=900&q=85"
+        alt="Pot de miel">
+
+      <img
+        src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=900&q=85"
+        alt="Miel naturel">
+
+      <img
+        src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=900&q=85"
+        alt="Miel en pot">
+
+      <img
+        src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?auto=format&fit=crop&w=900&q=85"
+        alt="Miel et cuillère">
+
+      <img
+        src="https://images.unsplash.com/photo-1558642891-54be180ea339?auto=format&fit=crop&w=900&q=85"
+        alt="Miel doré">
+
+      <img
+        src="https://images.unsplash.com/photo-1514995428455-447d4443fa7f?auto=format&fit=crop&w=900&q=85"
+        alt="Petit déjeuner au miel">
+
+      <img
+        src="https://images.unsplash.com/photo-1473973266408-ed4e27abdd47?auto=format&fit=crop&w=900&q=85"
+        alt="Miel naturel">
+
+      <img
+        src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=900&q=85"
+        alt="Miel et produits naturels">
+
+      <img
+        src="https://images.unsplash.com/photo-1505576633757-0ac1084af824?auto=format&fit=crop&w=900&q=85"
+        alt="Miel sur table">
+
+    </div>
+
+  </section>
+
+
+  <!-- À PROPOS -->
+  <section class="about" id="apropos">
+
+    <h2 class="title">
+      À propos de Miel de Sabitiou
+    </h2>
+
+    <p>
+      Miel de Sabitiou vous propose du miel naturel
+      pour vos besoins personnels, familiaux et professionnels.
+      Nous proposons la vente au détail ainsi que la vente en gros.
+      Contactez-nous pour connaître les prix selon la quantité souhaitée.
+    </p>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <h2>
+      Vous souhaitez commander ? 🍯
+    </h2>
+
+    <p>
+      Écrivez-nous directement sur WhatsApp.
+    </p>
+
+    <a
+      class="btn whatsapp"
+      target="_blank"
+      href="https://wa.me/22962634417?text=Bonjour%20Miel%20de%20Sabitiou%2C%20je%20souhaite%20commander%20du%20miel.">
+      💬 Commander sur WhatsApp
+    </a>
+
+  </section>
+
+
+  <!-- PIED DE PAGE -->
+  <footer>
+
+    © 2026 Miel de Sabitiou — Tous droits réservés
+
+  </footer>
+
+</body>
+</html>
